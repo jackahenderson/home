@@ -1,0 +1,132 @@
+# i3 config file (v4)
+
+# Window style
+font pango:Fira Sans Medium 10
+default_border none
+default_floating_border none
+popup_during_fullscreen smart
+
+# Remap keys
+exec --no-startup-id sleep 1s && xmodmap /home/jack/.xmodmap
+
+
+
+# Mod key
+set $mod Mod4
+floating_modifier $mod
+
+# Startup
+exec --no-startup-id python3 ~/.config/i3/i3.py
+exec --no-startup-id compton
+exec --no-startup-id hsetroot -solid "#2e3440"
+exec --no-startup-id thunderbird
+exec --no-startup-id qbittorrent
+
+# Shortcuts
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Fira Sans Medium-10' -nb '#d8dee9' -sb '#2e3440' -nf '#2e3440' -b -i -p '$'
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Escape exec xfce4-taskmanager 
+bindsym $mod+x exec pcmanfm 
+bindsym $mod+b exec firefox 
+bindsym $mod+v exec code 
+
+# Power
+bindsym $mod+BackSpace exec "systemctl poweroff"
+bindsym $mod+Shift+BackSpace exec "systemctl reboot"
+bindsym $mod+Control+Shift+BackSpace exec "i3-msg exit"
+
+# Settings
+for_window [class="Pcmanfm"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="qBittorrent"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="UE4Editor"] floating enable
+assign [class="thunderbird"] 9
+assign [class="qBittorrent"] 10
+assign [class="i3bar"] 10
+
+bindsym $mod+Shift+q kill
+
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+o split o
+bindsym $mod+p split v
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+space floating toggle
+bindsym $mod+a focus parent
+bindsym $mod+z focus child
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+
+# Window colors          # bord  #bg     # text  # indic # child border
+client.unfocused         #2e3440 #2e3440 #d8dee9 #b48ead #ff00ff
+client.focused           #4c566a #4c566a #eceff4 #b48ead #ff00ff
+client.focused_inactive  #4c566a #4c566a #eceff4 #b48ead #ff00ff
+client.urgent            #2e3440 #b48ead #2e3440 #b48ead #ff00ff
+
+bar {
+	status_command i3status
+	position top
+	separator_symbol "  "
+	font pango:Fira Sans Medium 10
+	mode invisible
+	workspace_buttons no
+	colors {
+		background              #d8dee9
+		statusline              #2e3440
+
+		focused_workspace       #37474f #455a64 #90a4ae
+		inactive_workspace      #37474f #37474f #607d8b
+	}
+}
