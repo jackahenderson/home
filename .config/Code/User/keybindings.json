@@ -1,0 +1,283 @@
+[
+
+	/***********
+		PANEL
+	 ***********/
+
+	{
+		"key": "alt+`",
+		"command": "workbench.action.terminal.focus",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "alt+`",
+		"command": "workbench.action.focusPanel",
+		"when": "!terminalFocus"
+	},
+	{
+		"key": "alt+`",
+		"command": "workbench.action.closePanel",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "alt+enter",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "panelFocus"
+	},
+
+	/***********
+		SIDEBAR
+	 ***********/
+
+	{
+		"key": "alt+tab",
+		"command": "workbench.action.toggleSidebarVisibility",
+	},
+
+	// Activity Bar
+	{
+		"key": "alt+a",
+		"command": "workbench.action.toggleActivityBarVisibility"
+	},
+
+	// eXplorer
+	{
+		"key": "alt+e",
+		"command": "workbench.view.explorer",
+	},
+
+	// Debug
+	{
+		"key": "alt+d",
+		"command": "workbench.view.debug"
+	},
+
+	// teSts [ Spec ]
+	{
+		"key": "alt+s",
+		"command": "workbench.view.extension.test",
+	}
+
+	// Git lense
+	,{
+		"key": "alt+g",
+		"command": "workbench.view.extension.gitlens",
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "-workbench.action.files.newUntitledFile"
+	},
+	{
+		"key": "alt+x",
+		"command": "workbench.view.extensions"
+	},
+	{
+		"key": "ctrl+shift+x",
+		"command": "-workbench.view.extensions"
+	},
+
+	/***********
+		FILESYSTEM
+	 ***********/
+
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "ctrl+shift+n",
+		"command": "explorer.newFolder"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "-workbench.action.files.saveAs"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveAll"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "-workbench.action.files.saveLocalFile",
+		"when": "remoteFileDialogVisible"
+	},
+
+	/***********
+		TESTING
+	 ***********/
+
+	{
+		"key": "ctrl+f5",
+		"command": "test-explorer.run-all",
+	},
+	{
+		"key": "ctrl+f6",
+		"command": "test-explorer.run-file"
+	},
+	{
+		"key": "ctrl+k ctrl+h",
+		"command": "-workbench.action.output.toggleOutput"
+	},
+	{
+		"key": "ctrl+f11",
+		"command": "workbench.action.tasks.reRunTask"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "actions.find"
+	},
+	{
+		"key": "ctrl+f",
+		"command": "-actions.find"
+	},
+	{
+		"key": "alt+f",
+		"command": "workbench.action.findInFiles"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-workbench.action.findInFiles"
+	},
+	{
+		"key": "alt+q",
+		"command": "workbench.view.search",
+		"when": "!searchViewletVisible"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-workbench.view.search",
+		"when": "!searchViewletVisible"
+	},
+	{
+		"key": "ctrl+alt+down",
+		"command": "editor.action.marker.next",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+f8",
+		"command": "-editor.action.marker.next",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+up",
+		"command": "editor.action.marker.prev",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+f8",
+		"command": "-editor.action.marker.prev",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "-workbench.action.gotoLine"
+	},
+	{
+		"key": "ctrl+.",
+		"command": "-editor.action.marker.next",
+		"when": "editorFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.gotoSymbol",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "-workbench.action.togglePanel"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "-workbench.view.search"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-editor.action.formatDocument",
+		"when": "editorTextFocus && !editorHasSelection"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "-editor.action.formatSelection",
+		"when": "editorHasSelection && editorTextFocus"
+	},
+	{
+		"key": "alt+h",
+		"command": "workbench.action.replaceInFiles"
+	},
+	{
+		"key": "ctrl+shift+h",
+		"command": "-workbench.action.replaceInFiles"
+	},
+	{
+		"key": "alt+o",
+		"command": "-C_Cpp.SwitchHeaderSource",
+		"when": "editorTextFocus && editorLangId == 'cpp'"
+	},
+	{
+		"key": "alt+o",
+		"command": "-C_Cpp.SwitchHeaderSource",
+		"when": "editorTextFocus && editorLangId == 'c'"
+	},
+	{
+		"key": "alt+o",
+		"command": "workbench.action.files.openFolder"
+	},
+	{
+		"key": "ctrl+k ctrl+o",
+		"command": "-workbench.action.files.openFolder"
+	},
+	{
+		"key": "alt+space",
+		"command": "C_Cpp.SwitchHeaderSource"
+	},
+	{
+		"key": "alt+[Backslash]",
+		"command": "workbench.view.extension.dockerView"
+	},
+	{
+		"key": "shift+alt+s",
+		"command": "java.test.explorer.runAll"
+	},
+	{
+		"key": "alt+l",
+		"command": "-toggleFindInSelection",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+l",
+		"command": "-toggleSearchEditorContextLines",
+		"when": "inSearchEditor"
+	},
+	{
+		"key": "alt+l",
+		"command": "workbench.view.extension.gitlab-workflow"
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "eslint.executeAutofix"
+	},
+	{
+		"key": "f4",
+		"command": "openInTerminal"
+	},
+	{
+		"key": "ctrl+escape",
+		"command": "notifications.clearAll"
+	},
+	{
+		"key": "alt+z",
+		"command": "-editor.action.toggleWordWrap"
+	},
+	{
+		"key": "alt+z",
+		"command": "workbench.action.toggleZenMode"
+	},
+	{
+		"key": "ctrl+k z",
+		"command": "-workbench.action.toggleZenMode"
+	}
+]
