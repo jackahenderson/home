@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec xmodmap /home/jack/.xmodmap
