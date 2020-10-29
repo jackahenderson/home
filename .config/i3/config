@@ -17,7 +17,7 @@ floating_modifier $mod
 
 # Startup
 exec --no-startup-id python3 ~/.config/i3/i3.py
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id hsetroot -solid "#2e3440"
 exec --no-startup-id thunderbird
 exec --no-startup-id qbittorrent
