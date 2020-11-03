@@ -8,8 +8,11 @@
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
       <value type="string" value="Firefox"/>
+      <value type="string" value="google-chrome"/>
+      <value type="string" value="IDEA"/>
       <value type="string" value="notify-send"/>
       <value type="string" value="Slack"/>
+      <value type="string" value="Thunderbird"/>
       <value type="string" value="Xfce4-notifyd settings"/>
     </property>
   </property>
