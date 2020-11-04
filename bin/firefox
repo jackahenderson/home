@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-exec /home/jack/opt/firefox/firefox
-
