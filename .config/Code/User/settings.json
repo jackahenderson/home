@@ -238,7 +238,6 @@
     "javascript.preferences.importModuleSpecifierEnding": "minimal",
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "php.validate.run": "onType",
-    "files.autoSave": "afterDelay",
     "cSpell.customUserDictionaries": [
     
     ],
