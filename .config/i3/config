@@ -21,6 +21,7 @@ exec --no-startup-id picom
 exec --no-startup-id hsetroot -solid "#2e3440"
 exec --no-startup-id thunderbird
 exec --no-startup-id qbittorrent
+exec --no-startup-id flatpak run ch.protonmail.protonmail-bridge --no-window
 
 # Shortcuts
 bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Fira Sans Medium-10' -nb '#d8dee9' -sb '#2e3440' -nf '#2e3440' -b -i -p '$'

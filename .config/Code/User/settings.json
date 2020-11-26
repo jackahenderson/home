@@ -242,4 +242,5 @@
     "cSpell.customUserDictionaries": [
     
     ],
+    "csharp.suppressDotnetInstallWarning": true,
 }
