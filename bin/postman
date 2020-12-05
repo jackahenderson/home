@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+exec /home/jack/opt/Postman/Postman
+

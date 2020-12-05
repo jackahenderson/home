@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+UNREAL_BINARY="/home/jack/opt/UnrealEngine/Engine/Binaries/Linux/UE4Editor"
+
+CMD="$UNREAL_BINARY"
+
+PROJECT=$(ls | grep .uproject)
+if [[ ! -z "$PROJECT" ]]; then
+	CMD="$CMD \"$PWD/$PROJECT\""
+fi
+
+CMD="$CMD $@"
+
+echo -e "\e[2m$CMD\e[0m\n"
+exec $CMD
